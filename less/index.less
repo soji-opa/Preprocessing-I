@@ -30,7 +30,8 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	line-height: 2;
+	
 }
 ol, ul {
 	list-style: none;
@@ -50,10 +51,166 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	// font-size: 62.5%;
+}
+html{
+	box-sizing: border-box;
+	font-size: 62.5%; 
+	// font-family: @font-stack;
 }
 
-html, body {
-    height: 100%;
+h1, h2, h3{
+	font-size: 2.5rem;
+	font-weight: bold;
 }
+
+
+html, body {
+	height: 100%;	
+}
+
+.container{
+
+	width: 120rem;
+	margin: 0 auto;
+	font-size: 1.6rem;
+	padding: 1.5% 1.5%;
+}
+header{
+	width: 100%;
+	h2{
+		font-size: 1.6rem;
+	}
+	
+	nav{
+		display: flex;
+		align-items: center;
+	}
+
+	.link{
+		width: 33%;
+		display: flex;
+		justify-content: space-around;
+		margin-left: 55%;
+	}
+	a{	
+		margin-left: 48px;
+		text-decoration: none;
+		color: aqua;
+		font-size: 1.7rem;
+	}
+	a:hover{
+		color: blue;
+	}
+	a:visited{
+		color: purple;
+	}
+}
+
+.first-part{
+	padding: 3%;
+	margin-top: 1%;
+	background-color: salmon;
+	height: 70vh;	
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+
+	img{
+		margin-top: 3%;
+		width: 200px;
+		height: 150px;
+	}
+	h2{
+		margin-top: 0%;
+		padding: 0%;
+		font-size: 5rem;
+    	line-height: 0.8;
+    	font-stretch: extra-expanded
+	}
+	p:first-of-type{
+		border-bottom: 1px solid rgb(170, 168, 168);
+		margin-top: 1%;
+		margin-bottom: 1%;
+		padding-bottom: 1%;
+		line-height: 1;
+	}
+	button{
+		width:10%;
+		height: 10%;
+		border-radius:3px;
+		padding: 1%;
+		background-color: dimgray;
+		color: white;
+	}
+	
+}
+
+.section-container{
+	margin-top: 1%;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+
+	div{
+		width: 45%
+	}
+	.first-child p{
+		line-height: 1.5;
+	}
+	.second-child{
+		
+
+		table, tr, td{
+			border: 1px solid rgb(226, 224, 224);
+			width: 100%;
+			padding:1%;
+
+			table tr:first-child td:first-child{
+				border-top-left-radius: 6px;
+				border-top-right-radius: 6px;
+			}
+		}
+		
+	}
+	
+}
+
+.third-container{
+	table{
+		width: 100%;
+		
+		// border-collapse: collapse;
+		margin-bottom: 2%;
+
+		th, td{
+			padding: 1%;
+			text-align: left;
+			border-bottom: 1px solid rgb(226, 224, 224);
+		}
+		th{
+			font-weight: bold;
+			border-top: 1px solid rgb(226, 224, 224);
+		}
+		tr:hover{
+			background-color: grey;
+		}
+		tr:nth-child(even){
+			background-color: lightgrey;
+		}
+	}
+}
+
+footer{
+	background-color:rgb(129, 128, 128);
+	margin-top: 2%;
+	margin-bottom: 1%;
+	p{
+		padding: 2%;
+		text-align: center;
+		color: rgb(251, 248, 243);
+	}
+}
+
+
 
