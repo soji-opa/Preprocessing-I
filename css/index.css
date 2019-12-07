@@ -1,1 +1,359 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+@font-face {
+  font-family: 'Gupter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Gupter Regular'), local('Gupter-Regular'), url(https://fonts.gstatic.com/s/gupter/v1/2-cm9JNmxJqPO1QkZpy7.ttf) format('truetype');
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 2;
+  font-family: 'Gupter', serif;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+h1,
+h2,
+h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+html,
+body {
+  height: 100%;
+}
+.container {
+  width: 120rem;
+  margin: 0 auto;
+  font-size: 1.6rem;
+  padding: 1.5% 1.5%;
+}
+@media (max-width: 500px) {
+  .container {
+    width: 100%;
+  }
+}
+header {
+  width: 100%;
+}
+header nav {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  header nav {
+    flex-direction: column;
+  }
+}
+header nav h2 {
+  font-size: 1.6rem;
+}
+@media (max-width: 500px) {
+  header nav h2 {
+    font-size: 2rem;
+    margin: 2% 0;
+    text-align: center;
+  }
+}
+header nav .link {
+  width: 33%;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 55%;
+}
+@media (max-width: 500px) {
+  header nav .link {
+    flex-direction: column;
+    margin-left: 0;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 3%;
+  }
+}
+header nav .link a {
+  margin-left: 48px;
+  text-decoration: none;
+  color: aqua;
+  font-size: 1.7rem;
+}
+header nav .link a a:hover {
+  color: blue;
+}
+header nav .link a a:visited {
+  color: purple;
+}
+@media (max-width: 500px) {
+  header nav .link a {
+    margin-left: 0;
+  }
+}
+.first-part {
+  padding: 3%;
+  margin-top: 1%;
+  background-color: salmon;
+  height: 60vh;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+@media (max-width: 500px) {
+  .first-part {
+    height: 110vh;
+  }
+}
+.first-part img {
+  margin-top: 3%;
+  width: 200px;
+  height: 150px;
+}
+.first-part h2 {
+  margin-top: 0%;
+  padding: 0%;
+  font-size: 5rem;
+  line-height: 0.8;
+  font-stretch: extra-expanded;
+}
+@media (max-width: 500px) {
+  .first-part h2 {
+    font-size: 2.5rem;
+  }
+}
+.first-part p:first-of-type {
+  border-bottom: 1px solid #aaa8a8;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  padding-bottom: 1%;
+  line-height: 1;
+}
+@media (max-width: 500px) {
+  .first-part p:first-of-type {
+    padding-bottom: 2%;
+  }
+}
+.first-part button {
+  width: 10%;
+  height: 10%;
+  border-radius: 3px;
+  padding: 1%;
+  background-color: dimgray;
+  color: white;
+}
+@media (max-width: 500px) {
+  .first-part button {
+    width: 30%;
+  }
+}
+.section-container {
+  margin-top: 1%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .section-container {
+    flex-direction: column;
+  }
+}
+.section-container div {
+  width: 45%;
+}
+@media (max-width: 500px) {
+  .section-container div {
+    width: 100%;
+  }
+}
+.section-container .first-child p {
+  line-height: 1.5;
+  text-align: justify;
+}
+.section-container .second-child table,
+.section-container .second-child tr,
+.section-container .second-child td {
+  border: 1px solid #e2e0e0;
+  width: 100%;
+  padding: 1%;
+}
+@media screen {
+  .section-container .second-child table,
+  .section-container .second-child tr,
+  .section-container .second-child td {
+    margin-bottom: 3%;
+  }
+}
+.section-container .second-child table table tr:first-child td:first-child,
+.section-container .second-child tr table tr:first-child td:first-child,
+.section-container .second-child td table tr:first-child td:first-child {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.third-container table {
+  width: 100%;
+  margin-bottom: 4%;
+}
+.third-container table th,
+.third-container table td {
+  padding: 1%;
+  text-align: left;
+  border-bottom: 1px solid #e2e0e0;
+}
+@media (max-width: 500px) {
+  .third-container table th,
+  .third-container table td {
+    font-size: 1.3rem;
+  }
+}
+.third-container table th {
+  font-weight: bold;
+  border-top: 1px solid #e2e0e0;
+}
+@media (max-width: 500px) {
+  .third-container table th {
+    font-size: 1.2rem;
+    line-height: 4;
+  }
+}
+.third-container table tr:hover {
+  background-color: grey;
+}
+.third-container table tr:nth-child(even) {
+  background-color: lightgrey;
+}
+footer {
+  background-color: #818080;
+  margin-top: 2%;
+  margin-bottom: 1%;
+}
+footer p {
+  padding: 2%;
+  text-align: center;
+  color: #fbf8f3;
+}
