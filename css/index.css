@@ -90,6 +90,13 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+@font-face {
+  font-family: 'Gupter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Gupter Regular'), local('Gupter-Regular'), url(https://fonts.gstatic.com/s/gupter/v1/2-cm9JNmxJqPO1QkZpy7.ttf) format('truetype');
+}
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -106,6 +113,7 @@ section {
 }
 body {
   line-height: 2;
+  font-family: 'Gupter', serif;
 }
 ol,
 ul {
@@ -150,41 +158,77 @@ body {
   font-size: 1.6rem;
   padding: 1.5% 1.5%;
 }
+@media (max-width: 500px) {
+  .container {
+    width: 100%;
+  }
+}
 header {
   width: 100%;
-}
-header h2 {
-  font-size: 1.6rem;
 }
 header nav {
   display: flex;
   align-items: center;
 }
-header .link {
+@media (max-width: 500px) {
+  header nav {
+    flex-direction: column;
+  }
+}
+header nav h2 {
+  font-size: 1.6rem;
+}
+@media (max-width: 500px) {
+  header nav h2 {
+    font-size: 2rem;
+    margin: 2% 0;
+    text-align: center;
+  }
+}
+header nav .link {
   width: 33%;
   display: flex;
   justify-content: space-around;
   margin-left: 55%;
 }
-header a {
+@media (max-width: 500px) {
+  header nav .link {
+    flex-direction: column;
+    margin-left: 0;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 3%;
+  }
+}
+header nav .link a {
   margin-left: 48px;
   text-decoration: none;
   color: aqua;
   font-size: 1.7rem;
 }
-header a:hover {
+header nav .link a a:hover {
   color: blue;
 }
-header a:visited {
+header nav .link a a:visited {
   color: purple;
+}
+@media (max-width: 500px) {
+  header nav .link a {
+    margin-left: 0;
+  }
 }
 .first-part {
   padding: 3%;
   margin-top: 1%;
   background-color: salmon;
-  height: 70vh;
+  height: 60vh;
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
+}
+@media (max-width: 500px) {
+  .first-part {
+    height: 110vh;
+  }
 }
 .first-part img {
   margin-top: 3%;
@@ -198,12 +242,22 @@ header a:visited {
   line-height: 0.8;
   font-stretch: extra-expanded;
 }
+@media (max-width: 500px) {
+  .first-part h2 {
+    font-size: 2.5rem;
+  }
+}
 .first-part p:first-of-type {
   border-bottom: 1px solid #aaa8a8;
   margin-top: 1%;
   margin-bottom: 1%;
   padding-bottom: 1%;
   line-height: 1;
+}
+@media (max-width: 500px) {
+  .first-part p:first-of-type {
+    padding-bottom: 2%;
+  }
 }
 .first-part button {
   width: 10%;
@@ -213,17 +267,33 @@ header a:visited {
   background-color: dimgray;
   color: white;
 }
+@media (max-width: 500px) {
+  .first-part button {
+    width: 30%;
+  }
+}
 .section-container {
   margin-top: 1%;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .section-container {
+    flex-direction: column;
+  }
+}
 .section-container div {
   width: 45%;
 }
+@media (max-width: 500px) {
+  .section-container div {
+    width: 100%;
+  }
+}
 .section-container .first-child p {
   line-height: 1.5;
+  text-align: justify;
 }
 .section-container .second-child table,
 .section-container .second-child tr,
@@ -231,6 +301,13 @@ header a:visited {
   border: 1px solid #e2e0e0;
   width: 100%;
   padding: 1%;
+}
+@media screen {
+  .section-container .second-child table,
+  .section-container .second-child tr,
+  .section-container .second-child td {
+    margin-bottom: 3%;
+  }
 }
 .section-container .second-child table table tr:first-child td:first-child,
 .section-container .second-child tr table tr:first-child td:first-child,
@@ -240,7 +317,7 @@ header a:visited {
 }
 .third-container table {
   width: 100%;
-  margin-bottom: 2%;
+  margin-bottom: 4%;
 }
 .third-container table th,
 .third-container table td {
@@ -248,9 +325,21 @@ header a:visited {
   text-align: left;
   border-bottom: 1px solid #e2e0e0;
 }
+@media (max-width: 500px) {
+  .third-container table th,
+  .third-container table td {
+    font-size: 1.3rem;
+  }
+}
 .third-container table th {
   font-weight: bold;
   border-top: 1px solid #e2e0e0;
+}
+@media (max-width: 500px) {
+  .third-container table th {
+    font-size: 1.2rem;
+    line-height: 4;
+  }
 }
 .third-container table tr:hover {
   background-color: grey;
